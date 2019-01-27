@@ -8,13 +8,18 @@
 
 import UIKit
 
+
+// View controller should only handle passing data
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        view.backgroundColor = .red
+        view.addSubview(tableView)
     }
 
-
+    var tableView = MoodTableView(frame: UIScreen.main.bounds)
 }
 
