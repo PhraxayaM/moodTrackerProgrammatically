@@ -12,7 +12,7 @@ import UIKit
 struct MoodEntry {
     var mood: Mood
     var date: Date
-    var color: UIColor
+
     
     enum Mood: Int {
         case none
