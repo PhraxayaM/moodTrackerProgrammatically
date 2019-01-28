@@ -38,7 +38,7 @@ class StackView: UIStackView {
     
     var dateLabel: UILabel = {
         var label = UILabel(frame: .zero)
-        label.font = UIFont(name: "Helvetica", size: 10)
+        label.font = UIFont(name: "Helvetica", size: 12)
         label.textColor = .lightGray
         label.text = "DateLabel"
         label.textAlignment = .left

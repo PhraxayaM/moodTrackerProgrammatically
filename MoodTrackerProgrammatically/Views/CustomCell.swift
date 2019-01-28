@@ -15,6 +15,7 @@ class CustomCell: UITableViewCell {
         accessoryType = .disclosureIndicator
         
         setupColorView()
+        setupStackView()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,6 +34,7 @@ class CustomCell: UITableViewCell {
     
     var colorContainer: UIImageView = {
         var view = UIImageView(frame: .zero)
+        view.backgroundColor = .black
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -40,7 +42,7 @@ class CustomCell: UITableViewCell {
     var labelStackView = StackView()
 
     func setupStackView() {
-        addSubview(labelStackView)
+        contentView.addSubview(labelStackView)
         
         NSLayoutConstraint.activate([
             labelStackView.topAnchor.constraint(equalTo: topAnchor, constant: 4),
@@ -60,5 +62,11 @@ class CustomCell: UITableViewCell {
             colorContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
             colorContainer.widthAnchor.constraint(equalToConstant: 12)
             ])
+    }
+    
+    func configure(_ entry: MoodEntry){
+        colorContainer.backgroundColor = entry.mood.colorValue
+        labelStackView.moodLabel.text = entry.mood.stringValue
+        labelStackView.dateLabel.text = String(describing: entry.date)
     }
 }

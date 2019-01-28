@@ -33,14 +33,24 @@ class MoodTableView: UITableView, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = dequeueReusableCell(withIdentifier: "moodCell", for: indexPath) as? CustomCell
+        let cell = dequeueReusableCell(withIdentifier: "moodCell", for: indexPath) as! CustomCell
         let entry = entries[indexPath.row]
-        cell!.labelStackView.moodLabel.text = entry.mood.stringValue
-        cell!.labelStackView.dateLabel.text = String(describing: entry.date)
-        return cell!
+        
+        // cell.configure(entry)
+        
+        cell.labelStackView.moodLabel.text = entry.mood.stringValue
+        cell.labelStackView.dateLabel.text = String(describing: entry.date)
+        cell.colorContainer.backgroundColor = entry.mood.colorValue
+        return cell
     }
     
-
+    // When a cell is selected do something
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let mainVC = self.findViewController() as? ViewController {
+            mainVC.navigationController?.pushViewController(MoodCreator(), animated: true)
+        }
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
