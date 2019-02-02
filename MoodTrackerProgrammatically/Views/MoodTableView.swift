@@ -46,8 +46,12 @@ class MoodTableView: UITableView, UITableViewDataSource {
     
     // When a cell is selected do something
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if let mainVC = self.findViewController() as? ViewController {
-            mainVC.navigationController?.pushViewController(MoodCreator(), animated: true)
+            let detailVC = MoodCreator()
+            detailVC.date = entries[indexPath.row].date
+            detailVC.mood = entries[indexPath.row].mood
+            mainVC.navigationController?.pushViewController(detailVC, animated: true)
         }
     }
     

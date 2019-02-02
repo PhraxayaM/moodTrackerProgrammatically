@@ -18,6 +18,8 @@
 		CD570E1921FE73E1004C610F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD570E1821FE73E1004C610F /* CustomCell.swift */; };
 		CD570E1B21FE76B4004C610F /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD570E1A21FE76B4004C610F /* StackView.swift */; };
 		CD570E1D21FE836F004C610F /* MoodCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD570E1C21FE836F004C610F /* MoodCreator.swift */; };
+		CD570E1F21FE85DD004C610F /* buttonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD570E1E21FE85DD004C610F /* buttonStackView.swift */; };
+		CD570E2121FE887E004C610F /* HousingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD570E2021FE887E004C610F /* HousingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		CD570E1821FE73E1004C610F /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		CD570E1A21FE76B4004C610F /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		CD570E1C21FE836F004C610F /* MoodCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCreator.swift; sourceTree = "<group>"; };
+		CD570E1E21FE85DD004C610F /* buttonStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonStackView.swift; sourceTree = "<group>"; };
+		CD570E2021FE887E004C610F /* HousingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 				CD570E1621FE6A49004C610F /* MoodTableView.swift */,
 				CD570E1821FE73E1004C610F /* CustomCell.swift */,
 				CD570E1A21FE76B4004C610F /* StackView.swift */,
+				CD570E1E21FE85DD004C610F /* buttonStackView.swift */,
+				CD570E2021FE887E004C610F /* HousingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,7 +301,9 @@
 				CD570E1D21FE836F004C610F /* MoodCreator.swift in Sources */,
 				CD570DE521FE63D5004C610F /* ViewController.swift in Sources */,
 				CD570E1921FE73E1004C610F /* CustomCell.swift in Sources */,
+				CD570E2121FE887E004C610F /* HousingView.swift in Sources */,
 				CD570E1221FE6712004C610F /* mood.swift in Sources */,
+				CD570E1F21FE85DD004C610F /* buttonStackView.swift in Sources */,
 				CD570DE321FE63D5004C610F /* AppDelegate.swift in Sources */,
 				CD570E1B21FE76B4004C610F /* StackView.swift in Sources */,
 			);
